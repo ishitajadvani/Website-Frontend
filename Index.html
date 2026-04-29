@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al Fajr Hospital — Excellence in Healthcare, UAE</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230D1F3C'/%3E%3Crect x='2' y='2' width='60' height='60' rx='10' fill='none' stroke='%23C9A96E' stroke-width='2'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23C9A96E' text-anchor='middle' letter-spacing='1'%3EAF%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #C9A96E;
+    --gold-light: #E8D5B0;
+    --gold-dark: #8B6D3F;
+    --navy: #0D1F3C;
+    --navy-mid: #162847;
+    --navy-light: #1E3A66;
+    --cream: #F8F5EF;
+    --cream-dark: #EDE7DA;
+    --white: #FFFFFF;
+    --text-muted: #6B7A8D;
+    --teal: #1A6B6B;
+    --teal-light: #E4F2F2;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 5%;
+    background: rgba(13, 31, 60, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,169,110,0.2);
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 14px;
+  }
+
+  .logo-mark {
+    width: 42px; height: 42px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo-mark svg { width: 22px; height: 22px; }
+
+  .logo-text { color: var(--white); }
+  .logo-text .en { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 500; letter-spacing: 0.04em; }
+  .logo-text .ar { font-size: 0.75rem; color: var(--gold-light); letter-spacing: 0.08em; margin-top: 1px; }
+
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy);
+    border: none; cursor: pointer;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .nav-cta:hover { background: var(--gold-dark); color: var(--white); transform: translateY(-1px); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    position: relative;
+    display: flex; align-items: center;
+    overflow: hidden;
+    padding-top: 80px;
+  }
+
+  .hero-bg-pattern {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 70% 50%, rgba(201,169,110,0.08) 0%, transparent 55%),
+      radial-gradient(circle at 20% 80%, rgba(26,107,107,0.12) 0%, transparent 40%);
+  }
+
+  .hero-grid-lines {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image:
+      linear-gradient(rgba(201,169,110,0.8) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,169,110,0.8) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 0 5%;
+    max-width: 700px;
+    animation: fadeUp 0.9s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(201,169,110,0.4);
+    color: var(--gold);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-badge span { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; display: inline-block; }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero h1 em { color: var(--gold); font-style: italic; }
+
+  .hero p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.62);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 0.9rem 2rem;
+    border: none; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500; font-size: 0.88rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--gold-dark); color: var(--white); transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    color: rgba(255,255,255,0.8);
+    padding: 0.9rem 2rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400; font-size: 0.88rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-stats {
+    position: absolute; right: 5%; bottom: 10%;
+    display: flex; gap: 3rem;
+    animation: fadeUp 0.9s 0.3s ease both;
+  }
+
+  .stat { text-align: right; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: var(--gold); line-height: 1; }
+  .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+
+  .hero-scroll {
+    position: absolute; left: 5%; bottom: 8%;
+    display: flex; align-items: center; gap: 12px;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+  }
+
+  .scroll-line { width: 40px; height: 1px; background: rgba(255,255,255,0.2); }
+
+  /* SERVICES */
+  .section { padding: 7rem 5%; }
+
+  .section-header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+
+  .section-label {
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block; width: 28px; height: 1px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.15;
+  }
+
+  .section-title em { color: var(--gold); font-style: italic; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5px;
+    background: var(--cream-dark);
+    border: 1.5px solid var(--cream-dark);
+  }
+
+  .service-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    transition: background 0.25s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute; bottom: 0; left: 0;
+    height: 2px; width: 0;
+    background: var(--gold);
+    transition: width 0.35s ease;
+  }
+
+  .service-card:hover::before { width: 100%; }
+  .service-card:hover { background: #FDFCF9; }
+
+  .service-icon {
+    width: 48px; height: 48px;
+    background: var(--cream);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: background 0.25s;
+  }
+
+  .service-card:hover .service-icon { background: var(--gold-light); }
+
+  .service-icon svg { width: 22px; height: 22px; stroke: var(--navy); fill: none; stroke-width: 1.5; }
+
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+
+  .service-card p {
+    font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; font-weight: 300;
+  }
+
+  /* ABOUT */
+  .about-section {
+    background: var(--navy);
+    padding: 7rem 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-img-frame {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: var(--navy-light);
+    border: 1px solid rgba(201,169,110,0.2);
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .about-img-frame::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, transparent 60%, rgba(201,169,110,0.08) 100%);
+  }
+
+  .about-pattern-overlay {
+    position: absolute; inset: 0; opacity: 0.05;
+    background-image:
+      radial-gradient(circle, rgba(201,169,110,1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .about-placeholder-icon {
+    width: 80px; height: 80px;
+    opacity: 0.15;
+  }
+
+  .about-accent-box {
+    position: absolute; bottom: -2rem; right: -2rem;
+    background: var(--gold);
+    padding: 2rem;
+    width: 200px;
+  }
+
+  .about-accent-box .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300;
+    color: var(--navy); line-height: 1;
+  }
+
+  .about-accent-box .label {
+    font-size: 0.72rem; font-weight: 500;
+    color: var(--navy-light); letter-spacing: 0.08em;
+    text-transform: uppercase; margin-top: 4px;
+  }
+
+  .about-content .section-label { color: var(--gold); }
+  .about-content .section-title { color: var(--white); }
+
+  .about-content p {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.95rem; line-height: 1.85; font-weight: 300;
+    margin-top: 1.5rem; margin-bottom: 2rem;
+  }
+
+  .about-features { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+
+  .about-features li {
+    display: flex; align-items: flex-start; gap: 12px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+  }
+
+  .about-features li::before {
+    content: '';
+    display: block; flex-shrink: 0;
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin-top: 7px;
+  }
+
+  /* DOCTORS */
+  .doctors-section { background: var(--cream); }
+
+  .doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .doctor-card {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    padding: 0;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .doctor-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(13,31,60,0.1); }
+
+  .doctor-avatar {
+    height: 220px;
+    background: linear-gradient(135deg, var(--navy-mid), var(--navy-light));
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+
+  .doctor-avatar::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 40px;
+    background: linear-gradient(to top, rgba(22,40,71,0.5), transparent);
+  }
+
+  .doctor-initials {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300; color: rgba(201,169,110,0.5);
+  }
+
+  .doctor-info { padding: 1.5rem; }
+  .doctor-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 4px; }
+  .doctor-specialty { font-size: 0.78rem; color: var(--gold-dark); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .doctor-detail { font-size: 0.82rem; color: var(--text-muted); }
+
+  /* APPOINTMENT */
+  .appointment-section {
+    background: var(--navy);
+    padding: 7rem 5%;
+    text-align: center;
+  }
+
+  .appointment-section .section-label { justify-content: center; }
+  .appointment-section .section-title { color: var(--white); text-align: center; margin-bottom: 3rem; }
+
+  .appointment-form {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,169,110,0.2);
+    max-width: 700px; margin: 0 auto;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-group.full { grid-column: 1/-1; }
+
+  .form-group label {
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .form-group input, .form-group select {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,169,110,0.2);
+    color: var(--white);
+    padding: 0.85rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+    border-radius: 2px;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus, .form-group select:focus { border-color: var(--gold); }
+  .form-group select option { background: var(--navy); }
+  .form-group input::placeholder { color: rgba(255,255,255,0.25); }
+
+  .btn-submit {
+    grid-column: 1/-1;
+    background: var(--gold);
+    color: var(--navy);
+    border: none; cursor: pointer;
+    padding: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500; font-size: 0.9rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+
+  .btn-submit:hover { background: var(--gold-dark); color: var(--white); }
+
+  /* CONTACT */
+  .contact-section {
+    padding: 7rem 5%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .contact-info-block { display: flex; flex-direction: column; gap: 2.5rem; }
+
+  .contact-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+
+  .contact-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: var(--cream-dark);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+  }
+
+  .contact-icon svg { width: 18px; height: 18px; stroke: var(--gold-dark); fill: none; stroke-width: 1.5; }
+
+  .contact-item-label {
+    font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px;
+  }
+
+  .contact-item-value { font-size: 0.95rem; color: var(--navy); line-height: 1.55; }
+
+  .map-placeholder {
+    width: 100%; aspect-ratio: 4/3;
+    background: var(--cream-dark);
+    border: 1px solid var(--cream-dark);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+
+  .map-grid {
+    position: absolute; inset: 0; opacity: 0.3;
+    background-image:
+      linear-gradient(var(--cream-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--cream-dark) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-color: #EBE5D8;
+  }
+
+  .map-pin {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 8px;
+  }
+
+  .map-pin-dot {
+    width: 16px; height: 16px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(201,169,110,0.25);
+  }
+
+  .map-pin-label {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    padding: 0.5rem 1rem;
+    font-size: 0.78rem; color: var(--navy);
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(13,31,60,0.08);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    padding: 4rem 5% 2rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 2rem;
+  }
+
+  .footer-brand .logo-text .en { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--white); }
+  .footer-brand .logo-text .ar { color: var(--gold); }
+  .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.38); line-height: 1.7; margin-top: 1.2rem; }
+
+  .footer-col h4 { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1.25rem; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+  .footer-col ul a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+  .footer-col ul a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.75rem; color: rgba(255,255,255,0.25);
+  }
+
+  .accred-badges { display: flex; gap: 1rem; align-items: center; }
+  .badge {
+    border: 1px solid rgba(201,169,110,0.25);
+    color: rgba(201,169,110,0.6);
+    font-size: 0.65rem; letter-spacing: 0.1em;
+    padding: 0.3rem 0.7rem; border-radius: 2px;
+  }
+
+  /* Emergency Banner */
+  .emergency-banner {
+    background: var(--gold);
+    padding: 0.8rem 5%;
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+  }
+
+  .emergency-banner p {
+    font-size: 0.82rem; font-weight: 500; color: var(--navy);
+    letter-spacing: 0.04em;
+  }
+
+  .emergency-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 600; color: var(--navy);
+    text-decoration: none;
+  }
+
+  .emergency-close {
+    position: absolute; right: 5%;
+    background: transparent; border: none; cursor: pointer;
+    color: var(--navy); font-size: 1.2rem; opacity: 0.5;
+  }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .about-section { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-section { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .hero-stats { position: static; justify-content: flex-start; margin-top: 3rem; }
+    .appointment-form { grid-template-columns: 1fr; }
+    .form-group.full { grid-column: 1; }
+    .btn-submit { grid-column: 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Emergency Banner -->
+<div class="emergency-banner" id="emergBanner">
+  <p>24/7 Emergency Services Available</p>
+  <a href="tel:+971800ALFAJR" class="emergency-num">800 AL FAJR</a>
+  <button class="emergency-close" onclick="document.getElementById('emergBanner').style.display='none'">✕</button>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-logo">
+    <div class="logo-mark" style="background:var(--gold);border-radius:10px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 12px rgba(201,169,110,0.35);">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:#0D1F3C;letter-spacing:0.04em;line-height:1;">AF</span>
+    </div>
+    <div class="logo-text">
+      <div class="en">Al Fajr Hospital</div>
+      <div class="ar">مستشفى الفجر · UAE</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#doctors">Doctors</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#appointment" class="nav-cta">Book Appointment</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span></span>UAE Licensed Medical Facility<span></span></div>
+    <h1>Where <em>Healing</em><br>Meets Excellence</h1>
+    <p>Al Fajr Hospital delivers world-class healthcare in Ras Al Khaimah and across the UAE, combining modern medical technology with compassionate, patient-centered care rooted in our community.</p>
+    <div class="hero-actions">
+      <a href="#appointment" class="btn-primary">Book Appointment</a>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">25+</div>
+      <div class="stat-label">Years of Care</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">120</div>
+      <div class="stat-label">Specialist Doctors</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">98%</div>
+      <div class="stat-label">Patient Satisfaction</div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll to explore
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section" id="services">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Our Departments</div>
+      <h2 class="section-title">Comprehensive <em>Medical</em> Services</h2>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <h3>Emergency Medicine</h3>
+      <p>Round-the-clock emergency care with trauma specialists and state-of-the-art resuscitation facilities available 24 hours a day, every day.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <h3>Cardiology</h3>
+      <p>Advanced cardiac care including interventional cardiology, echocardiography, and comprehensive heart disease prevention programs.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 9H4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h5l3 3V6L9 9z"/><path d="M21 9a3 3 0 0 1 0 6"/></svg>
+      </div>
+      <h3>Oncology</h3>
+      <p>Comprehensive cancer treatment with the latest chemotherapy, radiation therapy, and surgical oncology delivered by expert multidisciplinary teams.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Maternity & Women's Health</h3>
+      <p>Dedicated women's health services from prenatal care through delivery, neonatal intensive care, and postnatal support with expert midwives.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </div>
+      <h3>Pediatrics</h3>
+      <p>Specialized care for children from newborns to adolescents, including a dedicated PICU, developmental pediatrics, and pediatric surgery.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <h3>Radiology & Imaging</h3>
+      <p>Full-spectrum diagnostic imaging including 3T MRI, CT, PET scans, ultrasound, and digital X-ray with rapid reporting by consultant radiologists.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about-section" id="about">
+  <div class="about-visual">
+    <div class="about-img-frame">
+      <div class="about-pattern-overlay"></div>
+      <svg class="about-placeholder-icon" viewBox="0 0 80 80" fill="none">
+        <path d="M40 10L10 25v30l30 15 30-15V25L40 10z" stroke="#C9A96E" stroke-width="2"/>
+        <path d="M40 25v30M28 31l12-6 12 6" stroke="#C9A96E" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="about-accent-box">
+      <div class="num">JCI</div>
+      <div class="label">Accredited Hospital</div>
+    </div>
+  </div>
+  <div class="about-content">
+    <div class="section-label">Our Story</div>
+    <h2 class="section-title">A Legacy of <em>Healing</em><br>Since 1999</h2>
+    <p>Founded in Abu Dhabi in 1999, Al Fajr Hospital has grown into one of the UAE's most trusted healthcare institutions. Our name — meaning "dawn" in Arabic — reflects our commitment to bringing hope, renewal, and the highest standard of care to every patient we serve.</p>
+    <ul class="about-features">
+      <li>JCI and DHA accredited facility meeting international healthcare standards</li>
+      <li>State-of-the-art surgical suites with robotic-assisted surgery capabilities</li>
+      <li>Multilingual staff serving Arabic, English, Hindi, and Tagalog speaking patients</li>
+      <li>Advanced electronic health records for seamless, coordinated care</li>
+      <li>Dedicated wellness and preventive medicine programs for the community</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Doctors -->
+<section class="section doctors-section" id="doctors">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Medical Team</div>
+      <h2 class="section-title">Meet Our <em>Specialists</em></h2>
+    </div>
+  </div>
+  <div class="doctors-grid">
+    <div class="doctor-card">
+      <div class="doctor-avatar"><div class="doctor-initials">AK</div></div>
+      <div class="doctor-info">
+        <div class="doctor-name">Dr. Ahmed Al Kaabi</div>
+        <div class="doctor-specialty">Chief of Cardiology</div>
+        <div class="doctor-detail">FACC · 20 years experience</div>
+      </div>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-avatar"><div class="doctor-initials">SR</div></div>
+      <div class="doctor-info">
+        <div class="doctor-name">Dr. Sara Rahman</div>
+        <div class="doctor-specialty">Oncology Consultant</div>
+        <div class="doctor-detail">MRCP · 15 years experience</div>
+      </div>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-avatar"><div class="doctor-initials">MH</div></div>
+      <div class="doctor-info">
+        <div class="doctor-name">Dr. Mohammed Hassan</div>
+        <div class="doctor-specialty">Head of Pediatrics</div>
+        <div class="doctor-detail">FRCPCH · 18 years experience</div>
+      </div>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-avatar"><div class="doctor-initials">PA</div></div>
+      <div class="doctor-info">
+        <div class="doctor-name">Dr. Priya Anand</div>
+        <div class="doctor-specialty">Obstetrics & Gynecology</div>
+        <div class="doctor-detail">MRCOG · 12 years experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment -->
+<section class="appointment-section" id="appointment">
+  <div class="section-label" style="justify-content:center">Book a Visit</div>
+  <h2 class="section-title">Request an <em>Appointment</em></h2>
+  <div class="appointment-form">
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Your full name">
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="tel" placeholder="+971 XX XXX XXXX">
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="email@example.com">
+    </div>
+    <div class="form-group">
+      <label>Department</label>
+      <select>
+        <option value="">Select department</option>
+        <option>Emergency Medicine</option>
+        <option>Cardiology</option>
+        <option>Oncology</option>
+        <option>Maternity & Women's Health</option>
+        <option>Pediatrics</option>
+        <option>Radiology & Imaging</option>
+        <option>General Medicine</option>
+        <option>Orthopaedics</option>
+        <option>Ophthalmology</option>
+        <option>Dermatology</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Preferred Date</label>
+      <input type="date">
+    </div>
+    <div class="form-group">
+      <label>Preferred Time</label>
+      <select>
+        <option>Morning (8AM – 12PM)</option>
+        <option>Afternoon (12PM – 4PM)</option>
+        <option>Evening (4PM – 8PM)</option>
+      </select>
+    </div>
+    <div class="form-group full">
+      <label>Notes (optional)</label>
+      <input type="text" placeholder="Any specific concerns or requirements">
+    </div>
+    <button class="btn-submit">Confirm Appointment Request</button>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact-section" id="contact">
+  <div>
+    <div class="section-label">Find Us</div>
+    <h2 class="section-title">Get in <em>Touch</em></h2>
+    <div class="contact-info-block" style="margin-top:2.5rem">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Address</div>
+          <div class="contact-item-value">Al Fajr Hospital Tower, Al Nakheel District<br>Ras Al Khaimah, UAE — P.O. Box 47284</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 7.5 7.5l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Phone</div>
+          <div class="contact-item-value">+971 2 810 0000 (Main)<br>800 AL FAJR (Emergency)</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-value">info@alfajrhospital.ae<br>appointments@alfajrhospital.ae</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Working Hours</div>
+          <div class="contact-item-value">Outpatient: 8AM – 8PM (Sat–Thu)<br>Emergency: 24 hours, 7 days a week</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="map-placeholder" style="padding:0; overflow:hidden; position:relative; min-height:400px; background:#e8e0d0; cursor:pointer;" onclick="window.open('https://www.google.com/maps/place/Ras+Al+Khaimah/@25.7953,55.9430,13z','_blank')">
+
+    <!-- Inline SVG map illustration of Ras Al Khaimah area -->
+    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;min-height:400px;display:block;">
+      <!-- Background / sea -->
+      <rect width="600" height="400" fill="#C8D8E8"/>
+      <!-- Land mass RAK simplified -->
+      <polygon points="0,0 600,0 600,400 0,400" fill="#E8E2D4"/>
+      <!-- Sea / Gulf on left side -->
+      <polygon points="0,0 180,0 140,80 100,160 60,240 30,320 0,400" fill="#B8CCE0"/>
+      <!-- RAK city road grid (simplified) -->
+      <!-- Major roads horizontal -->
+      <line x1="120" y1="130" x2="560" y2="130" stroke="#fff" stroke-width="4"/>
+      <line x1="100" y1="180" x2="560" y2="180" stroke="#fff" stroke-width="3"/>
+      <line x1="130" y1="230" x2="560" y2="230" stroke="#fff" stroke-width="3"/>
+      <line x1="150" y1="280" x2="560" y2="280" stroke="#fff" stroke-width="2.5"/>
+      <line x1="160" y1="320" x2="560" y2="320" stroke="#fff" stroke-width="2.5"/>
+      <!-- Major roads vertical -->
+      <line x1="200" y1="50" x2="200" y2="390" stroke="#fff" stroke-width="3.5"/>
+      <line x1="280" y1="60" x2="280" y2="390" stroke="#fff" stroke-width="3"/>
+      <line x1="360" y1="70" x2="360" y2="390" stroke="#fff" stroke-width="3"/>
+      <line x1="440" y1="80" x2="440" y2="390" stroke="#fff" stroke-width="2.5"/>
+      <line x1="520" y1="90" x2="520" y2="390" stroke="#fff" stroke-width="2"/>
+      <!-- Main highway (thicker) -->
+      <line x1="120" y1="100" x2="580" y2="100" stroke="#D4C4A0" stroke-width="7"/>
+      <line x1="120" y1="100" x2="580" y2="100" stroke="#fff" stroke-width="2" stroke-dasharray="20,15"/>
+      <!-- Coastline detail -->
+      <path d="M150,0 Q130,40 110,90 Q90,140 75,200 Q60,260 45,310 Q30,360 15,400" stroke="#8AAAC4" stroke-width="3" fill="none"/>
+      <!-- City blocks (fill rectangles) -->
+      <rect x="210" y="140" width="60" height="30" rx="2" fill="#D4CEC4" opacity="0.7"/>
+      <rect x="290" y="140" width="60" height="30" rx="2" fill="#D4CEC4" opacity="0.7"/>
+      <rect x="370" y="140" width="60" height="30" rx="2" fill="#D4CEC4" opacity="0.7"/>
+      <rect x="210" y="190" width="60" height="30" rx="2" fill="#D4CEC4" opacity="0.7"/>
+      <rect x="290" y="190" width="60" height="30" rx="2" fill="#CBCBC0" opacity="0.7"/>
+      <rect x="370" y="190" width="60" height="30" rx="2" fill="#D4CEC4" opacity="0.7"/>
+      <rect x="450" y="190" width="60" height="30" rx="2" fill="#D4CEC4" opacity="0.7"/>
+      <rect x="210" y="240" width="60" height="30" rx="2" fill="#D4CEC4" opacity="0.6"/>
+      <rect x="290" y="240" width="60" height="30" rx="2" fill="#D4CEC4" opacity="0.6"/>
+      <rect x="370" y="240" width="60" height="30" rx="2" fill="#D4CEC4" opacity="0.6"/>
+      <rect x="450" y="240" width="60" height="30" rx="2" fill="#D4CEC4" opacity="0.6"/>
+      <rect x="210" y="290" width="60" height="20" rx="2" fill="#D4CEC4" opacity="0.5"/>
+      <rect x="290" y="290" width="60" height="20" rx="2" fill="#D4CEC4" opacity="0.5"/>
+      <rect x="370" y="290" width="60" height="20" rx="2" fill="#D4CEC4" opacity="0.5"/>
+      <!-- Park / green area -->
+      <rect x="155" y="145" width="35" height="60" rx="4" fill="#B8D4B0" opacity="0.8"/>
+      <rect x="155" y="245" width="35" height="40" rx="4" fill="#B8D4B0" opacity="0.7"/>
+      <!-- Hospital pin marker -->
+      <circle cx="320" cy="175" r="22" fill="#0D1F3C" opacity="0.18"/>
+      <circle cx="320" cy="165" r="16" fill="#C9A96E"/>
+      <circle cx="320" cy="165" r="10" fill="#0D1F3C"/>
+      <!-- Cross symbol on pin -->
+      <line x1="320" y1="160" x2="320" y2="170" stroke="#C9A96E" stroke-width="2.5"/>
+      <line x1="315" y1="165" x2="325" y2="165" stroke="#C9A96E" stroke-width="2.5"/>
+      <!-- Pin tail -->
+      <polygon points="314,174 326,174 320,188" fill="#C9A96E"/>
+      <!-- Label callout -->
+      <rect x="232" y="145" width="175" height="26" rx="3" fill="white" opacity="0.95"/>
+      <text x="320" y="163" font-family="DM Sans, sans-serif" font-size="11" fill="#0D1F3C" text-anchor="middle" font-weight="500">Al Fajr Hospital · Ras Al Khaimah</text>
+      <!-- Scale bar -->
+      <rect x="30" y="360" width="80" height="4" rx="2" fill="#7A8A9A"/>
+      <text x="30" y="355" font-family="DM Sans, sans-serif" font-size="10" fill="#5A6A7A">0</text>
+      <text x="105" y="355" font-family="DM Sans, sans-serif" font-size="10" fill="#5A6A7A">2 km</text>
+      <!-- Compass -->
+      <text x="555" y="55" font-family="DM Sans, sans-serif" font-size="13" fill="#4A5A6A" text-anchor="middle" font-weight="600">N</text>
+      <polygon points="555,62 551,78 555,75 559,78" fill="#4A5A6A"/>
+      <!-- Watermark style label -->
+      <text x="85" y="200" font-family="DM Sans, sans-serif" font-size="11" fill="#6A8AAA" opacity="0.7" transform="rotate(-10,85,200)">Arabian Gulf</text>
+    </svg>
+
+    <!-- Click overlay with hover effect -->
+    <div style="position:absolute;inset:0;background:rgba(13,31,60,0);transition:background 0.3s;z-index:2;" onmouseover="this.style.background='rgba(13,31,60,0.1)'" onmouseout="this.style.background='rgba(13,31,60,0)'"></div>
+
+    <!-- Open in Maps CTA button -->
+    <a href="https://www.google.com/maps/place/Ras+Al+Khaimah/@25.7953,55.9430,13z" target="_blank" rel="noopener noreferrer"
+       onclick="event.stopPropagation()"
+       style="position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:10;background:#C9A96E;color:#0D1F3C;font-family:'DM Sans',sans-serif;font-size:0.76rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;padding:0.6rem 1.4rem;border-radius:2px;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,0.22);display:flex;align-items:center;gap:8px;white-space:nowrap;">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#0D1F3C" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      View on Google Maps &#8599;
+    </a>
+
+    <!-- Top label badge -->
+    <div style="position:absolute;top:14px;left:14px;z-index:10;background:rgba(13,31,60,0.88);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.75rem;padding:0.4rem 0.9rem;border-radius:2px;letter-spacing:0.06em;border-left:3px solid #C9A96E;backdrop-filter:blur(4px);">
+      Al Fajr Hospital &mdash; Ras Al Khaimah, UAE
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <div class="logo-mark" style="background:var(--gold);border-radius:10px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 12px rgba(201,169,110,0.35);">
+          <span style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:#0D1F3C;letter-spacing:0.04em;line-height:1;">AF</span>
+        </div>
+        <div class="logo-text">
+          <div class="en">Al Fajr Hospital</div>
+          <div class="ar">مستشفى الفجر</div>
+        </div>
+      </div>
+      <p>Bringing the light of exceptional healthcare to every patient in the UAE since 1999. JCI Accredited. DHA Licensed.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Emergency Medicine</a></li>
+        <li><a href="#">Cardiology</a></li>
+        <li><a href="#">Oncology</a></li>
+        <li><a href="#">Pediatrics</a></li>
+        <li><a href="#">Maternity Care</a></li>
+        <li><a href="#">Radiology</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Hospital</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Doctors</a></li>
+        <li><a href="#">Accreditations</a></li>
+        <li><a href="#">News & Events</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Patient Services</h4>
+      <ul>
+        <li><a href="#">Book Appointment</a></li>
+        <li><a href="#">Patient Portal</a></li>
+        <li><a href="#">Insurance Plans</a></li>
+        <li><a href="#">Medical Records</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Al Fajr Hospital. All rights reserved. Licensed by the Department of Health, Ras Al Khaimah.</span>
+    <div class="accred-badges">
+      <span class="badge">JCI Accredited</span>
+      <span class="badge">DHA Licensed</span>
+      <span class="badge">ISO 9001</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Fade in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card, .doctor-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
